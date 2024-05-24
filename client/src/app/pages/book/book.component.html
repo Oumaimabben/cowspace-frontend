@@ -1,0 +1,50 @@
+<body>
+  <section class="banner">
+    <h2>BOOK YOUR ROOM NOW</h2>
+    <div class="card-container">
+      <div class="card-img">
+        <!-- image here -->
+      </div>
+
+      <div class="card-content">
+        <h3>Reservation</h3>
+        <form>
+          <div class="form-row">
+            <input
+              type="datetime-local"
+              id="start-time"
+              name="start-time"
+              value="2024-01-01T09:00"
+              min="2024-01-01T00:00"
+              max="2030-12-01T00:00" [(ngModel)]="startdate"
+              />
+            <input
+              type="datetime-local"
+              id="end-time"
+              name="end-time"
+              value="2024-01-01T09:00"
+              min="2024-01-01T00:00"
+              max="2030-12-01T00:00" [(ngModel)]="findate" />
+          </div>
+
+          <div class="form-row">
+            <input type="text" placeholder="Full Name" [(ngModel)]="fullname">
+            <input type="text" placeholder="Phone Number" [(ngModel)]="number">
+          </div>
+
+          <div class="form-row">
+  <select name="room-type" id="room-type" [(ngModel)]="selectedRoomId">
+    <option value="" disabled selected>Select Room </option>
+    <option *ngFor="let room of room" [value]="room._id">{{ room.name }}</option>
+  </select>
+</div>
+
+
+          <div class="form-row">
+            <input type="submit" value="BOOK" (click)="onbook()">
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>

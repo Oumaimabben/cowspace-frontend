@@ -1,0 +1,33 @@
+<main class="w-screen relative">
+  <!-- Header -->
+  <div class="w-screen fixed h-[16rem] flex justify-center items-center px-2 text-center font-normal mb-6 text-2xl">
+    <div class="cursor-pointer font-bold" style="font-size: 2rem;">
+      Sign-In
+    </div>
+  </div>
+
+  <!-- Login form -->
+  <div class="main-screen w-screen h-screen flex items-center justify-center">
+    <div class="flex gap-4 w-3/12 flex-col m-auto">
+      <!-- email -->
+      <div class="email relative h-14" >
+        <fa-icon [icon]="faUserCircle" class="absolute top-0 bottom-0 left-5 text-2xl flex items-center"></fa-icon>
+        <input type="email" name="email" id="email" placeholder="Email" class="h-14 w-full rounded-full pl-16 text-xl" [(ngModel)]="email">
+      </div>
+      <!-- password -->
+      <div class="password relative h-14">
+        <fa-icon [icon]="faLock" class="absolute top-0 bottom-0 left-5 text-2xl flex items-center"></fa-icon>
+        <input type="password" name="password" id="password" placeholder="Password" class="h-14 w-full rounded-full pl-16 text-xl" [(ngModel)]="password">
+      </div>
+      <div class="w-full h-2 justify-center mt-2">
+
+            <button type="button" class="flex items-center p-3 rounded-full w-full justify-center font-medium text-2xl text-white bg-blue-700 hover:bg-blue-600" (click)="onLogin()">Login</button>
+      
+    </div>
+    <div class="flex w-full justify-left mt-10">
+        <a href="sign-up"><span class="hover:underline hover:text-blue-500 text-lg font-medium">Create Account</span></a>
+    </div>
+
+    </div>
+  </div>
+</main>

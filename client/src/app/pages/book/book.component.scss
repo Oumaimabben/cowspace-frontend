@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/room1.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 20px;
+
+  h2 {
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 420px 420px;
+}
+
+.card-img {
+  background: url("/assets/room2.jpg") center/cover no-repeat;
+}
+
+.card-content {
+  background: #fff;
+  height: 330px;
+
+  h3 {
+    text-align: center;
+    color: #000;
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+  }
+}
+
+.form-row {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+form {
+  select,
+  input {
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+
+    &::placeholder {
+      color: #9a9a9a;
+    }
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    color: #9a9a9a;
+  }
+
+  input[type="submit"] {
+    color: #fff;
+    background: #f2745f;
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+// Apply styles using SCSS nesting
+input,
+
+  label {
+    display: block;
+    color: #9a9a9a;
+  }
+
+
+
+
+@media (max-width: 992px) {
+  .card-container {
+    grid-template-columns: 100%;
+    width: 100vw;
+  }
+
+  .card-img {
+    height: 330px;
+  }
+}
